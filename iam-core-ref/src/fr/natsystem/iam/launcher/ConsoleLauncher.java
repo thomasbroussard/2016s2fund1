@@ -5,6 +5,8 @@ package fr.natsystem.iam.launcher;
 
 import java.util.Scanner;
 
+import fr.natsystem.iam.business.CreateActivity;
+
 /**
  * @author tbrou
  *
@@ -35,6 +37,7 @@ public class ConsoleLauncher {
 		switch (choice) {
 		case "a":
 			//Create
+			CreateActivity.execute(scanner);
 			break;
 		case "b":
 			//Modify
