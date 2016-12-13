@@ -22,6 +22,7 @@ public class CreateActivity {
 		String email = scanner.nextLine();
 		Identity identity = new Identity("",displayName, email);
 		
+	
 		//persist the identity somewhere
 		System.out.println("this is the identity you created");
 		System.out.println(identity);
