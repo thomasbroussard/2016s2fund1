@@ -15,10 +15,11 @@ public class TestFiles {
 	
 	
 	public static void main(String[] args) {
-		File file = new File("test.txt");
+		File file = new File("/tests/subTest/test.txt");
 		if (!file.exists()){
 			try {
 				//"risky" operations
+				file.getParentFile().mkdirs();
 				file.createNewFile();
 			} catch (IOException e) {
 				// do something to handle the exceptional case
