@@ -8,6 +8,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import fr.epita.iam.datamodel.Identity;
+
 /**
  * @author tbrou
  *
@@ -17,6 +19,14 @@ public class TestFiles {
 	public static void main(String[] args) {
 		File file = new File("/tests/subTest/test.txt");
 		PrintWriter writer = initWriter(file);
+		Identity identity = new Identity("123", "Thomas Broussard", "thomas.broussard@gmail.com");
+		
+		writer.println("---------IDENTITY:BEGIN-------");
+		writer.println(identity.getDisplayName());
+		writer.println(identity.getEmail());
+		writer.println(identity.getUid());
+		writer.println("---------IDENTITY:END---------");
+		
 		
 		writer.close();
 	}
