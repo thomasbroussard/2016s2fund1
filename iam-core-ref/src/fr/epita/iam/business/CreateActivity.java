@@ -1,11 +1,11 @@
 /**
  * 
  */
-package fr.natsystem.iam.business;
+package fr.epita.iam.business;
 
 import java.util.Scanner;
 
-import fr.natsystem.iam.datamodel.Identity;
+import fr.epita.iam.datamodel.Identity;
 
 /**
  * @author tbrou

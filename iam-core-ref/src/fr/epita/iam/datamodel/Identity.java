@@ -1,7 +1,7 @@
 /**
  * 
  */
-package fr.natsystem.iam.datamodel;
+package fr.epita.iam.datamodel;
 
 /**
  * @author tbrou

@@ -1,11 +1,11 @@
 /**
  * 
  */
-package fr.natsystem.iam.launcher;
+package fr.epita.iam.launcher;
 
 import java.util.Scanner;
 
-import fr.natsystem.iam.business.CreateActivity;
+import fr.epita.iam.business.CreateActivity;
 
 /**
  * @author tbrou
