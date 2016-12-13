@@ -16,6 +16,15 @@ public class TestFiles {
 
 	public static void main(String[] args) {
 		File file = new File("/tests/subTest/test.txt");
+		PrintWriter writer = initWriter(file);
+		
+		writer.close();
+	}
+
+	/**
+	 * @param file
+	 */
+	private static PrintWriter initWriter(File file) {
 		if (!file.exists()) {
 			try {
 				// "risky" operations
@@ -35,11 +44,8 @@ public class TestFiles {
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} finally {
-			if (writer != null) {
-				writer.close();
-			}
 		}
+		return writer;
 	}
 
 }
