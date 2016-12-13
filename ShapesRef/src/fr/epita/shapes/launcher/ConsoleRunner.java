@@ -55,6 +55,8 @@ public class ConsoleRunner {
 		System.out.println("Enter the triangles list size");
 		int trianglesListSize = scanner.nextInt();
 		
+		
+	
 		for (int i = 0; i < trianglesListSize ; i++){
 			Triangle triangle = getTriangle(scanner);
 			listOfShapes.add(triangle);
