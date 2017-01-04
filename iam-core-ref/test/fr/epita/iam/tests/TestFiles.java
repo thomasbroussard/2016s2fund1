@@ -17,6 +17,9 @@ import fr.epita.iam.datamodel.Identity;
 public class TestFiles {
 
 	public static void main(String[] args) {
+		
+		
+
 		File file = new File("/tests/subTest/test.txt");
 		PrintWriter writer = initWriter(file);
 		Identity identity = new Identity("123", "Thomas Broussard", "thomas.broussard@gmail.com");
