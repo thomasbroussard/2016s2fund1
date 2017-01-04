@@ -6,7 +6,7 @@ package fr.epita.iam.business;
 import java.util.Scanner;
 
 import fr.epita.iam.datamodel.Identity;
-import fr.epita.iam.services.FileIdentityWriter;
+import fr.epita.iam.services.FileIdentityDAO;
 
 /**
  * @author tbrou
@@ -26,7 +26,7 @@ public class CreateActivity {
 	
 		//persist the identity somewhere
 		System.out.println("this is the identity you created");
-		FileIdentityWriter identityWriter = new FileIdentityWriter("tests.txt");
+		FileIdentityDAO identityWriter = new FileIdentityDAO("tests.txt");
 		identityWriter.write(identity);
 
 		
