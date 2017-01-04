@@ -30,6 +30,7 @@ public class TestFiles {
 		String uid = scanner.nextLine();
 		//delimiter
 		scanner.nextLine();
+		
 		Identity readIdentity = new Identity(uid, displayName, email);
 		System.out.println(readIdentity);
 		
