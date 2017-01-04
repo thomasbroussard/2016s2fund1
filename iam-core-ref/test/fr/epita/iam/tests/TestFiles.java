@@ -5,6 +5,8 @@ package fr.epita.iam.tests;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import fr.epita.iam.datamodel.Identity;
@@ -22,6 +24,7 @@ public class TestFiles {
 		identityWriter.write(new Identity("123", "Thomas Broussard", "thomas.broussard@gmail.com"));
 
 		Scanner scanner = new Scanner(new File("tests.txt"));
+		List<Identity> readIdentities = new ArrayList<Identity>();
 		//TODO repeat to have the whole list of identities
 		//delimiter
 		scanner.nextLine();
@@ -32,7 +35,8 @@ public class TestFiles {
 		scanner.nextLine();
 		
 		Identity readIdentity = new Identity(uid, displayName, email);
-		System.out.println(readIdentity);
+		readIdentities.add(readIdentity);
+		System.out.println(readIdentities);
 		
 		
 	}
