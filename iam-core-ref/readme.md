@@ -1,3 +1,7 @@
+# TODO (10/01/2017)
+* Make sure that you're able to configure everything related to the DB from scratch
+* Make sure you are able to run the TestJDBC in your environment.
+
 # TODO (04/01/2017)
 * Play with the Date and SimpleDateFormat classes you can check [date operation](http://thomas-broussard.fr/presentation/fundamental/lecture7.html?full#8 "date") 
 
