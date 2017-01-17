@@ -1,3 +1,8 @@
+# TODO (17/01/2017)
+* Make an interface to represent the behavior of the "DAO" Concept
+* Finish to wipe all the SQLException thrown by public methods in the IdentityJDBCDAO
+* Do the same for your FileIdentityDAO 
+
 # TODO (10/01/2017)
 * Make sure that you're able to configure everything related to the DB from scratch
 * Make sure you are able to run the TestJDBC in your environment.

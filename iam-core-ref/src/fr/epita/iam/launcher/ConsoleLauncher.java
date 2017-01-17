@@ -6,6 +6,7 @@ package fr.epita.iam.launcher;
 import java.util.Scanner;
 
 import fr.epita.iam.business.CreateActivity;
+import fr.epita.iam.services.IdentityJDBCDAO;
 
 /**
  * @author tbrou
@@ -33,7 +34,7 @@ public class ConsoleLauncher {
 		System.out.println("c. delete an Identity");
 		System.out.println("d. quit");
 		String choice = scanner.nextLine();
-
+		IdentityJDBCDAO dao;
 		switch (choice) {
 		case "a":
 			//Create

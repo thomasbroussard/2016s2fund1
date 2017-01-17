@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import fr.epita.iam.datamodel.Identity;
+import fr.epita.iam.exceptions.DaoInitializationException;
 
 /**
  * @author tbrou
@@ -24,14 +25,15 @@ public class IdentityJDBCDAO {
 	/**
 	 * 
 	 */
-	public IdentityJDBCDAO() {
+	public IdentityJDBCDAO() throws DaoInitializationException {
+			
 		try {
 			getConnection();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			DaoInitializationException die = new DaoInitializationException();
+			die.initCause(e);
+			throw die;
 		}
-
 	}
 
 	/**
@@ -50,6 +52,7 @@ public class IdentityJDBCDAO {
 		return this.currentConnection;
 	}
 
+	
 	private void releaseResources() {
 		try {
 			this.currentConnection.close();
@@ -58,6 +61,11 @@ public class IdentityJDBCDAO {
 		}
 	}
 
+	/**
+	 * Read all the identities from the database
+	 * @return
+	 * @throws SQLException
+	 */
 	public List<Identity> readAllIdentities() throws SQLException {
 		List<Identity> identities = new ArrayList<Identity>();
 
@@ -77,6 +85,11 @@ public class IdentityJDBCDAO {
 		return identities;
 	}
 
+	/**
+	 * write an identity in the database
+	 * @param identity
+	 * @throws SQLException
+	 */
 	public void write(Identity identity) throws SQLException {
 		Connection connection = getConnection();
 
